@@ -1,0 +1,36 @@
+description = "Analisar uma conta e recomendar estratégia de expansão (cross-sell/upsell, incluindo adoção de feature)"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat expansion/brain/persona.md}
+!{cat expansion/skills/business-context.md}
+!{cat expansion/skills/opportunity-signals.md}
+!{cat expansion/skills/value-mapping.md}
+!{cat expansion/skills/timing.md}
+!{cat expansion/skills/stakeholders.md}
+!{cat expansion/skills/expansion-strategy.md}
+!{cat expansion/skills/opportunity-cadence.md}
+
+!{cat knowledge/company-context.md}
+!{cat knowledge/business-model.md}
+!{cat knowledge/customer-segmentation.md}
+!{cat knowledge/commercial-rules.md}
+!{cat knowledge/escalation.md}
+
+# Tarefa
+{{args}}
+
+# Formato de resposta obrigatório
+Seguir common/knowledge/response-pattern.md (Diagnóstico → Insight → Ação → Como executar → Como medir → O que observar depois).
+Se faltar dado crítico, seguir common/knowledge/missing-data-protocol.md em vez de travar.
+"""

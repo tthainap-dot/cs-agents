@@ -1,0 +1,39 @@
+description = "Simular comportamento/impacto de um cenário de expansão antes de agir (ex.: e se a carteira reagir de tal forma)"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat expansion/brain/persona.md}
+!{cat expansion/skills/business-context.md}
+!{cat expansion/skills/opportunity-signals.md}
+!{cat expansion/skills/value-mapping.md}
+!{cat expansion/skills/timing.md}
+
+!{cat knowledge/company-context.md}
+!{cat knowledge/customer-segmentation.md}
+
+# Tarefa (simulação)
+{{args}}
+
+# Aviso obrigatório de limite de dado (dizer isso ANTES de simular, sempre)
+Este agente NÃO tem acesso a dado de portfólio/uso ao vivo (sem integração de CRM ou banco de dados —
+ver PRD, seção 7). Ele só simula sobre o que estiver explicitamente no campo "Tarefa" abaixo. Se a tarefa
+pedir para "escanear a carteira", "quantas contas...", ou qualquer análise sobre contas que não foram
+coladas/listadas no próprio texto da tarefa, comece a resposta deixando isso explícito e peça ao CSM para
+colar a lista/planilha real antes de simular — não estime ou invente números de portfólio.
+
+# Processo esperado
+1. Mapear os dados/contas envolvidos no cenário — apenas os que estão explicitamente no texto da tarefa (ver aviso acima).
+2. Simular o comportamento esperado sob a mudança proposta, explicitando premissas assumidas.
+3. Reportar achados separando fato, hipótese e recomendação (common/knowledge/fact-hypothesis-recommendation.md).
+4. Encerrar com uma recomendação de ação, seguindo o formato de common/knowledge/response-pattern.md.
+"""

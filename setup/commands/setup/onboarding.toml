@@ -1,0 +1,16 @@
+description = "Conduzir questionário estruturado de onboarding do MCP e popular/atualizar a base de conhecimento da empresa"
+
+prompt = """
+!{cat setup/brain/persona.md}
+!{cat setup/skills/knowledge-elicitation.md}
+!{cat common/standards/anti_hallucination.md}
+
+# Tarefa
+{{args}}
+
+# Regra crítica de escrita
+Você tem acesso às ferramentas de arquivo do seu próprio cliente (Write/Edit). Ao final de cada fase confirmada,
+escreva ou atualize o(s) arquivo(s) de knowledge/ correspondente(s), conforme o mapeamento em setup/skills/knowledge-elicitation.md.
+NÃO invente conteúdo para perguntas não respondidas — se o usuário pular uma pergunta, registre "Não informado" no arquivo,
+nunca um valor inferido.
+"""
