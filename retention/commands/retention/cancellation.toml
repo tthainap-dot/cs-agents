@@ -1,0 +1,54 @@
+description = "Responder a um pedido de cancelamento já em andamento — decidir recuperável ou não, com veredito explícito"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat retention/brain/persona.md}
+!{cat retention/skills/cancellation-response.md}
+!{cat retention/skills/recovery-plan.md}
+!{cat retention/skills/risk-diagnosis.md}
+!{cat retention/skills/post-churn-learning.md}
+
+!{cat knowledge/commercial-rules.md}
+!{cat knowledge/sla.md}
+!{cat knowledge/escalation.md}
+!{cat knowledge/tools-operations.md}
+!{cat knowledge/churn-history.md}
+
+# Tarefa (pedido de cancelamento)
+{{args}}
+
+# Regras obrigatórias deste comando (mais rígidas que create/analyze)
+
+1. **Veredito explícito, sempre.** Toda resposta termina com uma das duas conclusões, sem ambiguidade:
+   - "Recuperável — plano abaixo."
+   - "Não recuperável — registrar aprendizado."
+   Nunca terminar a resposta sem um desses dois vereditos.
+
+2. **Gate sem exceção.** Qualquer concessão monetária (desconto, crédito, condição especial) envolvida no plano
+   de recuperação exige aprovação antes de qualquer promessa ao cliente — não existe faixa de negociação livre
+   neste comando (diferente do Expansion Agent). A resposta deve conter literalmente:
+   "Recomendação pronta. Esta ação exige aprovação."
+
+3. **Urgência de prazo.** Existe uma janela real de SLA (ver knowledge/sla.md) — se faltar dado crítico, aplicar
+   common/knowledge/missing-data-protocol.md com viés para RECOMENDAÇÃO PROVISÓRIA IMEDIATA (agir com o que se
+   tem, registrar o que falta) em vez de só pedir mais contexto e esperar — diferente de create/analyze, aqui
+   esperar demais pode custar o prazo do SLA.
+
+4. **Consultar o histórico primeiro.** Antes de propor um plano de recuperação, checar knowledge/churn-history.md
+   por um padrão semelhante já tentado antes — não repetir uma abordagem que já se mostrou ineficaz.
+
+5. **Aprendizado obrigatório ao final (RET-08).** Depois do veredito, sempre produzir o resumo de aprendizado
+   pós-churn (retention/skills/post-churn-learning.md) e instruir explicitamente que uma entrada deve ser
+   anexada a knowledge/churn-history.md (o cliente MCP que tem ferramentas de arquivo faz a escrita — este
+   servidor nunca escreve arquivo sozinho).
+"""

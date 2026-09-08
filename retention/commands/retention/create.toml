@@ -1,0 +1,33 @@
+description = "Diagnosticar risco preventivamente numa conta e propor plano de recuperação (sem pedido formal de cancelamento em andamento)"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat retention/brain/persona.md}
+!{cat retention/skills/risk-diagnosis.md}
+!{cat retention/skills/recovery-plan.md}
+!{cat retention/skills/churn-signals.md}
+!{cat retention/skills/churn-impact.md}
+
+!{cat knowledge/commercial-rules.md}
+!{cat knowledge/metrics.md}
+!{cat knowledge/customer-segmentation.md}
+
+# Tarefa
+{{args}}
+
+# Formato de resposta obrigatório
+Seguir common/knowledge/response-pattern.md (Diagnóstico → Insight → Ação → Como executar → Como medir → O que observar depois).
+Se faltar dado crítico, seguir common/knowledge/missing-data-protocol.md em vez de travar.
+Este comando é para diagnóstico PREVENTIVO — se a tarefa descrever um pedido de cancelamento já em andamento,
+avisar que o comando correto é retention:cancellation, não este.
+"""

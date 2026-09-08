@@ -38,6 +38,14 @@ export const AGENT_CATALOG = {
       analyze: 'expansion/commands/expansion/analyze.toml',
     },
   },
+  retention: {
+    description: 'Diagnostica risco de churn, responde a pedidos de cancelamento e transforma casos individuais em aprendizado de carteira',
+    commands: {
+      create: 'retention/commands/retention/create.toml',
+      analyze: 'retention/commands/retention/analyze.toml',
+      cancellation: 'retention/commands/retention/cancellation.toml',
+    },
+  },
 };
 
 /**
