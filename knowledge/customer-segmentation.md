@@ -10,11 +10,19 @@ Prioriza-se **MRR mais alto**, não tamanho da empresa isoladamente. Exemplo dad
 
 Segmentação por tamanho e por MRR — acima de R$500 de MRR já entra no radar e passa a fazer parte de carteira dedicada.
 
+## Clarificação de critério — perfil A/B (registrada durante validação com dado real de cohort)
+
+O critério primário de A/B/C/D é **nº de funcionários** (ver tabela de perfis abaixo) — **A = acima de 100 funcionários**, não "top 30 por MRR" como uma resposta anterior sugeriu. Esse critério pode ser ajustado por MRR em casos específicos (uma conta pode subir de tier por relevância de receita mesmo sem bater o headcount). **Toda conta perfil B ou A é considerada estratégica.**
+
+## Perfil B = ICP (Ideal Customer Profile) da empresa
+
+Confirmado com dado real de cohort (jan/2025-set/2026): perfil B tem a **menor taxa de churn entre os 4 perfis (16,4%)**, inclusive menor que A. Motivo, segundo o stakeholder: **B é o ICP da empresa** — o perfil que a operação e o produto atuais conseguem atender melhor, sem precisar de muitas mudanças/adaptações em produto ou operação. Isso é causa confirmada, não só correlação observada — usar como referência ao avaliar fit de novas contas e ao priorizar esforço de retenção/expansão.
+
 ## Perfis de segmentação (D / C / B / A)
 
 | Critério | D | C | B | A |
 |---|---|---|---|---|
-| Tamanho (funcionários) | 1-30 | 31-49 | 51+ | Top 30 clientes (maior MRR) |
+| Tamanho (funcionários) | 1-30 | 31-50 | 51-100 | Acima de 100 (ajustável por MRR em casos específicos) |
 | Possui responsável por RH/DP? | Não | Sim (indiferente) | Sim (indiferente) | Sim (indiferente) |
 | Perfil do administrador | Desorganizado; não possui conhecimento sobre controle de jornada e regras do ponto | Organizado; possui conhecimento sobre controle de jornada e regras do ponto | Organizado (indiferente); possui conhecimento sobre controle de jornada e regras do ponto | Organizado (indiferente); possui conhecimento sobre controle de jornada e regras do ponto |
 | Qualidade do trial | Trial não satisfatório ou pouco engajamento — teste sem profundidade | Trial com maior profundidade, pontos na plataforma, operações de administrador | Indiferente | Indiferente |
