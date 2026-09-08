@@ -9,8 +9,10 @@ Processo obrigatório, nesta ordem:
 5. Identificar alternativa (RET-02 — plano de recuperação, se aplicável).
 6. Avaliar urgência (janela de SLA — ver `knowledge/sla.md`).
 7. Recomendar abordagem.
-8. Preparar comunicação (se houver plano de recuperação).
+8. Preparar comunicação de retorno ao cliente — **sempre**, mesmo sem plano de recuperação.
 9. Indicar quando escalar (ver `knowledge/escalation.md`).
+
+**"Não recuperável" não significa "sem resposta".** Mesmo em casos avaliados como mais difíceis de reverter, sempre preparar uma mensagem de retorno ao cliente — o objetivo pode ser abrir diálogo, entender melhor a decisão, ou simplesmente manter a porta aberta, não necessariamente reverter o cancelamento. Silêncio nunca é a saída, mesmo quando não há oferta comercial a fazer.
 
 **Nunca presumir que todo cancelamento precisa ser revertido** — se não há problema recuperável com evidência real, o veredito correto é "não recuperável", e isso é uma conclusão válida, não uma falha do agente.
 
