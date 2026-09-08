@@ -21,6 +21,7 @@ prompt = """
 !{cat knowledge/commercial-rules.md}
 !{cat knowledge/metrics.md}
 !{cat knowledge/customer-segmentation.md}
+!{cat knowledge/churn-taxonomy.md}
 
 # Tarefa
 {{args}}

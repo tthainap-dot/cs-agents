@@ -19,6 +19,7 @@ prompt = """
 
 !{cat knowledge/customer-segmentation.md}
 !{cat knowledge/metrics.md}
+!{cat knowledge/churn-taxonomy.md}
 
 # Tarefa (simulação)
 {{args}}
