@@ -1,0 +1,38 @@
+description = "Acompanhar e diagnosticar o onboarding de uma conta em andamento — contexto, First Value, adoção, riscos, oportunidades e cronograma"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat onboarding/brain/persona.md}
+!{cat onboarding/skills/context-diagnosis.md}
+!{cat onboarding/skills/first-value-mapping.md}
+!{cat onboarding/skills/functionality-adoption.md}
+!{cat onboarding/skills/onboarding-risk.md}
+!{cat onboarding/skills/future-opportunities.md}
+!{cat onboarding/skills/implementation-timeline.md}
+
+!{cat knowledge/team-structure.md}
+!{cat knowledge/sla.md}
+!{cat knowledge/customer-segmentation.md}
+!{cat knowledge/onboarding-criteria.md}
+!{cat knowledge/churn-taxonomy.md}
+!{cat knowledge/escalation.md}
+
+# Tarefa
+{{args}}
+
+# Formato de resposta obrigatório
+Seguir common/knowledge/response-pattern.md (Diagnóstico → Insight → Ação → Como executar → Como medir → O que observar depois).
+Se faltar dado crítico, seguir common/knowledge/missing-data-protocol.md em vez de travar.
+Este comando é para acompanhamento CORRENTE do onboarding — se a tarefa pedir uma decisão de handoff
+(conta pronta para passar ao Ongoing), avisar que o comando correto é onboarding:handoff, não este.
+"""

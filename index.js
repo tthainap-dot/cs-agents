@@ -46,6 +46,14 @@ export const AGENT_CATALOG = {
       cancellation: 'retention/commands/retention/cancellation.toml',
     },
   },
+  onboarding: {
+    description: 'Conduz o cliente da implantação até um handoff saudável para o Ongoing, diagnosticando First Value, adoção e riscos',
+    commands: {
+      create: 'onboarding/commands/onboarding/create.toml',
+      analyze: 'onboarding/commands/onboarding/analyze.toml',
+      handoff: 'onboarding/commands/onboarding/handoff.toml',
+    },
+  },
 };
 
 /**

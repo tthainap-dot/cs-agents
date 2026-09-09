@@ -1,0 +1,53 @@
+description = "Construir a decisão e o documento de handoff de uma conta do Onboarding para o Ongoing — comando crítico, veredito baseado em evidência"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat onboarding/brain/persona.md}
+!{cat onboarding/skills/context-diagnosis.md}
+!{cat onboarding/skills/first-value-mapping.md}
+!{cat onboarding/skills/functionality-adoption.md}
+!{cat onboarding/skills/onboarding-risk.md}
+!{cat onboarding/skills/future-opportunities.md}
+!{cat onboarding/skills/handoff-construction.md}
+
+!{cat knowledge/team-structure.md}
+!{cat knowledge/sla.md}
+!{cat knowledge/onboarding-criteria.md}
+!{cat knowledge/escalation.md}
+
+# Tarefa (decisão de handoff)
+{{args}}
+
+# Regras obrigatórias deste comando (mais rígidas que create/analyze)
+
+1. **Nunca declarar handoff "pronto" citando apenas o cumprimento do prazo de SLA.** Toda conclusão de
+   "pronto para handoff" precisa citar explicitamente a evidência real de First Value (knowledge/onboarding-criteria.md)
+   — não a suposição de que ele existe.
+
+2. **Se o prazo de SLA já bateu mas a evidência de First Value ainda não existe:** o handoff é produzido
+   mesmo assim (não travar a conta indefinidamente no limbo entre Onboarding e Ongoing), mas a resposta deve
+   conter obrigatoriamente uma seção em destaque chamada "Riscos pendentes de handoff", com o responsável
+   explícito do lado do Ongoing para continuar acompanhando aquele risco especificamente. A informação não
+   pode se perder na passagem de bastão.
+
+3. **Nunca esconder risco para facilitar o handoff** (ver persona) — mesmo uma conta com handoff tecnicamente
+   aprovado deve ter riscos conhecidos listados, não omitidos por parecerem "menores".
+
+4. **Toda oportunidade futura identificada (ONB-05) é registrada, não negociada** — este comando não substitui
+   o Expansion Agent; o handoff só documenta a oportunidade e sugere o responsável pelo acompanhamento.
+
+5. **Formato de saída do handoff:** seguir a estrutura de onboarding/skills/handoff-construction.md
+   (por que o cliente comprou, o que esperava, o que foi entregue, o que já/não utiliza, First Value com
+   evidência, valor percebido, riscos, oportunidades, stakeholders, próximos passos, compromissos, pontos de
+   atenção, e a seção "Riscos pendentes de handoff" quando aplicável).
+"""
