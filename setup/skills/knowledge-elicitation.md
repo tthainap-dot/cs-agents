@@ -1,6 +1,6 @@
 # Skill: Elicitação Faseada da Base de Conhecimento
 
-Questionário de 27 perguntas, em 4 fases. Cada fase termina com um resumo de confirmação antes de gravar os arquivos de `knowledge/` correspondentes.
+Questionário de 31 perguntas, em 5 fases. Cada fase termina com um resumo de confirmação antes de gravar os arquivos de `knowledge/` correspondentes.
 
 ## Fase 1 — Negócio → grava `knowledge/company-context.md` + `knowledge/business-model.md`
 
@@ -40,6 +40,13 @@ Questionário de 27 perguntas, em 4 fases. Cada fase termina com um resumo de co
 25. Quais canais de comunicação são usados com o cliente?
 26. Já existem automações ou réguas de comunicação hoje? Quais?
 27. Como são os processos internos relevantes (ex.: como uma oportunidade de expansão é registrada e passada adiante)?
+
+## Fase 5 — Value Realization & Onboarding → grava `knowledge/onboarding-criteria.md`
+
+28. O que conta como **First Value** — o primeiro momento em que o cliente realmente percebe resultado (não apenas terminou configuração/login)? Isso varia por módulo/produto contratado?
+29. Qual o **Time to Value** esperado — quanto tempo até o cliente típico chegar nesse First Value?
+30. Além do prazo de SLA (`knowledge/sla.md`), o que precisa estar **verdadeiro** para considerar o onboarding concluído / pronto para handoff?
+31. Como a empresa diferencia **"produto funcional"** (setup técnico ok) de **"cliente preparado"** (adoção real)?
 
 ## Regra de escrita
 
