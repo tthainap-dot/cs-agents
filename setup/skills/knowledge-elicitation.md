@@ -1,6 +1,6 @@
 # Skill: Elicitação Faseada da Base de Conhecimento
 
-Questionário de 31 perguntas, em 5 fases. Cada fase termina com um resumo de confirmação antes de gravar os arquivos de `knowledge/` correspondentes.
+Questionário de 34 perguntas, em 6 fases. Cada fase termina com um resumo de confirmação antes de gravar os arquivos de `knowledge/` correspondentes.
 
 ## Fase 1 — Negócio → grava `knowledge/company-context.md` + `knowledge/business-model.md`
 
@@ -47,6 +47,12 @@ Questionário de 31 perguntas, em 5 fases. Cada fase termina com um resumo de co
 29. Qual o **Time to Value** esperado — quanto tempo até o cliente típico chegar nesse First Value?
 30. Além do prazo de SLA (`knowledge/sla.md`), o que precisa estar **verdadeiro** para considerar o onboarding concluído / pronto para handoff?
 31. Como a empresa diferencia **"produto funcional"** (setup técnico ok) de **"cliente preparado"** (adoção real)?
+
+## Fase 6 — Ongoing & Sucesso Contínuo → grava `knowledge/ongoing-criteria.md`
+
+32. Qual a cadência esperada de QBR/EBR com os clientes (trimestral, semestral, sob demanda, varia por perfil)?
+33. O que define uma conta "de sucesso" no relacionamento contínuo (além de não ter dado churn) — existe algum indicador ou marco específico?
+34. Existe algum ritual ou checkpoint recorrente já estabelecido no Ongoing (além do QBR/EBR) que o agente deveria conhecer?
 
 ## Regra de escrita
 
