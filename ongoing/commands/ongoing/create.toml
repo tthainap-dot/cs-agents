@@ -1,0 +1,40 @@
+description = "Acompanhar continuamente uma conta — saúde, pontos cegos, plano de sucesso, maturidade, estratégia, comunicação e automação"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/customer-maturity.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat ongoing/brain/persona.md}
+!{cat ongoing/skills/account-health.md}
+!{cat ongoing/skills/blind-spots.md}
+!{cat ongoing/skills/success-plan.md}
+!{cat ongoing/skills/maturity-evolution.md}
+!{cat ongoing/skills/account-strategy.md}
+!{cat ongoing/skills/communication-strategy.md}
+!{cat ongoing/skills/process-automation.md}
+
+!{cat knowledge/health-score.md}
+!{cat knowledge/customer-segmentation.md}
+!{cat knowledge/metrics.md}
+!{cat knowledge/ongoing-criteria.md}
+!{cat knowledge/escalation.md}
+
+# Tarefa
+{{args}}
+
+# Formato de resposta obrigatório
+Seguir common/knowledge/response-pattern.md (Diagnóstico → Insight → Ação → Como executar → Como medir → O que observar depois).
+Se faltar dado crítico, seguir common/knowledge/missing-data-protocol.md em vez de travar.
+Sinal concreto de oportunidade de expansão ou de risco de churn: registrar e recomendar acionar o Expansion
+Agent ou o Retention Agent, respectivamente — nunca decidir/negociar/construir plano de recuperação aqui.
+Se a tarefa pedir preparação de QBR/EBR, avisar que o comando correto é ongoing:qbr, não este.
+"""

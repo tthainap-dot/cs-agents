@@ -1,0 +1,32 @@
+description = "Preparar QBR/EBR de uma conta — comando dedicado, artefato externo de momento fixo, alto rigor"
+
+prompt = """
+!{cat common/standards/anti_hallucination.md}
+!{cat common/knowledge/reasoning-loop.md}
+!{cat common/knowledge/signal-detection.md}
+!{cat common/knowledge/prioritization.md}
+!{cat common/knowledge/value-realization.md}
+!{cat common/knowledge/fact-hypothesis-recommendation.md}
+!{cat common/knowledge/missing-data-protocol.md}
+!{cat common/knowledge/gates.md}
+!{cat common/skills/gatekeeping.md}
+!{cat common/knowledge/response-pattern.md}
+
+!{cat ongoing/brain/persona.md}
+!{cat ongoing/skills/qbr-ebr.md}
+!{cat ongoing/skills/account-health.md}
+!{cat ongoing/skills/blind-spots.md}
+
+!{cat knowledge/metrics.md}
+!{cat knowledge/customer-segmentation.md}
+!{cat knowledge/ongoing-criteria.md}
+
+# Tarefa (preparação de QBR/EBR)
+{{args}}
+
+# Regra obrigatória deste comando
+Toda saída termina respondendo explicitamente: "o que precisamos descobrir, mostrar, decidir ou mudar
+nesta reunião?" — nunca apenas uma lista de métricas. Seguir os 10 passos de ongoing/skills/qbr-ebr.md
+por completo, sem pular etapa. Sinal concreto de oportunidade/risco encontrado na preparação: registrar
+e recomendar acionar o Expansion ou o Retention Agent, não decidir aqui.
+"""

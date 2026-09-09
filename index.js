@@ -54,6 +54,14 @@ export const AGENT_CATALOG = {
       handoff: 'onboarding/commands/onboarding/handoff.toml',
     },
   },
+  ongoing: {
+    description: 'Acompanha contas continuamente, identifica saúde, evolução e oportunidades/riscos não pedidos pelo cliente — sem substituir Expansion ou Retention na decisão final',
+    commands: {
+      create: 'ongoing/commands/ongoing/create.toml',
+      analyze: 'ongoing/commands/ongoing/analyze.toml',
+      qbr: 'ongoing/commands/ongoing/qbr.toml',
+    },
+  },
 };
 
 /**
